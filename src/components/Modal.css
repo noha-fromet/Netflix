@@ -11,7 +11,6 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    /* Assurez-vous que le modal est au-dessus du reste de la page */
     backdrop-filter: blur(5px);
     /* Flouter l'arrière-plan */
 }
@@ -21,11 +20,15 @@
     background-color: #2c2c2c;
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
+    width: 512px;
+    /* Largeur de l'affiche */
+    height: auto;
+    /* Hauteur automatique pour garder les proportions */
     color: white;
     overflow-y: auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Centrer le texte et les images */
 }
 
 /* Style pour le bouton de fermeture */
@@ -44,4 +47,14 @@
 
 .modal-close-btn:hover {
     background-color: #ff1a1a;
+}
+
+/* Style pour l'image dans le modal */
+.modal-content img {
+    width: 100%;
+    height: auto;
+    /* Garder la proportion sans déformer l'image */
+    object-fit: contain;
+    /* Assurer que l'image est contenue sans dépasser les limites */
+    border-radius: 10px;
 }

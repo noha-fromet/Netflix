@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import MovieCard from "./MovieCard"; // Importation de votre composant MovieCard
-import Modal from "./Modal";  // Importation du composant Modal
-import "./MovieSection.css";  // Assurez-vous que ce fichier CSS existe et est bien appliqué
+import MovieCard from "./MovieCard";
+import Modal from "./Modal";
+import "./MovieSection.css";
 
 function MovieSection({ title, items }) {
-    const [selectedMovie, setSelectedMovie] = useState(null); // Pour gérer le film sélectionné pour le modal
+    const [selectedMovie, setSelectedMovie] = useState(null);
 
     const handleMovieClick = (movie) => {
-        setSelectedMovie(movie); // Ouvre le modal avec les informations du film
+        setSelectedMovie(movie);
     };
 
     const handleCloseModal = () => {
-        setSelectedMovie(null); // Ferme le modal en réinitialisant l'état
+        setSelectedMovie(null);
     };
 
     return (
@@ -20,16 +20,13 @@ function MovieSection({ title, items }) {
             <div className="movieRow--listarea overflow-x-auto">
                 <div className="movieRow--list flex space-x-4">
                     {items.map((movie) => (
-                        <div className="movieRow--item" key={movie.id}>
-                            <div onClick={() => handleMovieClick(movie)}>
-                                <MovieCard movie={movie} />
-                            </div>
+                        <div className="movieRow--item" key={movie.id} onClick={() => handleMovieClick(movie)}>
+                            <MovieCard movie={movie} />
                         </div>
                     ))}
                 </div>
             </div>
 
-            {/* Si un film est sélectionné, afficher le Modal */}
             {selectedMovie && <Modal movie={selectedMovie} onClose={handleCloseModal} />}
         </div>
     );

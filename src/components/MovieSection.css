@@ -1,3 +1,4 @@
+/* Styles pour la page d'accueil - section des films */
 .movieRow {
     margin-bottom: 30px;
 }
@@ -34,4 +35,76 @@
 .movieRow--item img:hover {
     transform: scale(1);
     /* Agrandissement au survol */
+}
+
+/* Styles pour le Modal */
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    /* Très élevé pour être sûr qu'il soit au-dessus de tout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Légère opacité pour un fond sombre */
+}
+
+.bg-gray-900 {
+    background-color: #2d3748;
+    /* Couleur d'arrière-plan du modal */
+}
+
+.text-white {
+    color: #fff;
+}
+
+/* Style du bouton de fermeture (×) */
+.absolute {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.absolute:hover {
+    color: red;
+}
+
+/* Pour l'image du modal */
+.bg-gray-900 img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    /* Légèrement ajusté */
+    object-fit: cover;
+    /* Pour bien ajuster l'image */
+}
+
+/* Texte du modal - Organisation des informations */
+.p-6 {
+    padding: 1.5rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+/* Ajout d'un espacement entre les éléments de texte */
+.modal-info {
+    margin-top: 15px;
+}
+
+.modal-info p {
+    margin-bottom: 10px;
 }
