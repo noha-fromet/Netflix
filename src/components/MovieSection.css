@@ -1,0 +1,37 @@
+.movieRow {
+    margin-bottom: 30px;
+}
+
+.movieRow h2 {
+    margin: 0px 0px 0px 30px;
+}
+
+.movieRow--listarea {
+    overflow-x: auto;
+}
+
+.movieRow--list {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px 0;
+}
+
+.movieRow--item {
+    display: inline-block;
+    width: 200px;
+    /* Taille des images ajustée */
+    flex-shrink: 0;
+}
+
+.movieRow--item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    transform: scale(0.9);
+    /* Initialement réduit */
+}
+
+.movieRow--item img:hover {
+    transform: scale(1);
+    /* Agrandissement au survol */
+}
